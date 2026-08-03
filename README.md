@@ -1,4 +1,4 @@
-# 🩺 End-to-End-Diabetes-Prediction-with-Gradio UI 
+# 🩺 End-to-End Diabetes Prediction with Gradio UI 
 
 An end-to-end Machine Learning pipeline and interactive web interface that cleans diagnostic health data, performs exploratory data analysis (EDA), evaluates predictive models (including Logistic Regression and ensemble classifiers), and serves real-time risk predictions via an interactive **Gradio** UI.
 

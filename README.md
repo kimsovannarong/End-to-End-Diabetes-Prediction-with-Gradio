@@ -109,18 +109,4 @@ To identify the most accurate and reliable algorithm for diabetes risk predictio
 | **Decision Tree** | 71.4% | 0.62 | 0.63 | 0.62 | 0.70 | Baseline |
 ---
 
-## 💡 Machine Learning Workflow & Code Snippets
 
-### 1. Data Cleaning & Feature Scaling
-```python
-import pandas as pd
-from sklearn.preprocessing import StandardScaler
-
-# Handle zero values in clinical columns where 0 is invalid
-zero_cols = ['Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI']
-for col in zero_cols:
-    df[col] = df[col].replace(0, df[col].median())
-
-# Feature Scaling
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(df.drop('Outcome', axis=1))

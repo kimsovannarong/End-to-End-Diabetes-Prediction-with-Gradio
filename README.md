@@ -42,7 +42,15 @@ This project uses the **Pima Indians Diabetes Dataset** provided by the *Nationa
 * **🌐 Web User Interface (Gradio):** Built a web interface enabling real-time input sliders/fields and generating probability scores alongside instant diagnostic output.
 
 ---
+## 🛠️ Tech Stack & Libraries
 
+* **Language:** Python
+* **Data Processing & EDA:** Pandas, NumPy, Matplotlib, Seaborn
+* **Machine Learning:** Scikit-learn
+* **Web Interface:** Gradio
+* **Environment:** Jupyter Notebook / Python Scripts
+
+---
 ## 🛠️ Data Preparation Methodology
 
 To ensure high model performance and reliable real-world predictions, the raw dataset underwent a rigorous data preprocessing pipeline:
@@ -76,14 +84,29 @@ To ensure high model performance and reliable real-world predictions, the raw da
   X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
   )
-## 🛠️ Tech Stack & Libraries
 
-* **Language:** Python
-* **Data Processing & EDA:** Pandas, NumPy, Matplotlib, Seaborn
-* **Machine Learning:** Scikit-learn
-* **Web Interface:** Gradio
-* **Environment:** Jupyter Notebook / Python Scripts
+---
+## 🤖 Model Selection & Evaluation
 
+To identify the most accurate and reliable algorithm for diabetes risk prediction, five distinct classification models were trained and evaluated on the test dataset:
+
+1. **Logistic Regression:** Serves as a baseline probabilistic linear classifier.
+2. **Random Forest (Best Performing):** Ensembled decision trees that captured non-linear feature interactions with the highest accuracy and ROC-AUC score.
+3. **Support Vector Machine (SVM):** Effective at constructing hyperplanes in high-dimensional space for clear decision boundaries.
+4. **K-Nearest Neighbors (KNN):** Distance-based instance classifier predicting based on feature proximity.
+5. **Decision Tree:** Intuitive tree-structured rule model prone to high variance, used as a structural baseline.
+
+---
+
+### 📊 Model Performance Comparison
+
+| Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC | Status |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Random Forest** | **81.2%** | **0.78** | **0.75** | **0.76** | **0.87** | 🏆 **Best Model** |
+| **Logistic Regression** | 77.9% | 0.74 | 0.68 | 0.71 | 0.83 | Baseline |
+| **Support Vector Machine (SVM)** | 77.3% | 0.75 | 0.65 | 0.70 | 0.82 | Benchmark |
+| **K-Nearest Neighbors (KNN)** | 74.0% | 0.68 | 0.61 | 0.64 | 0.77 | Benchmark |
+| **Decision Tree** | 71.4% | 0.62 | 0.63 | 0.62 | 0.70 | Baseline |
 ---
 
 ## 💡 Machine Learning Workflow & Code Snippets
